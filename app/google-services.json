@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "848307937951",
+    "firebase_url": "https://smart-parking-syatem-ff56b-default-rtdb.firebaseio.com",
+    "project_id": "smart-parking-syatem-ff56b",
+    "storage_bucket": "smart-parking-syatem-ff56b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848307937951:android:5129064ee27a1cc221f8aa",
+        "android_client_info": {
+          "package_name": "com.example.clientapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848307937951-jja9ih67q7kg1n72b0vao000ilpvg7ge.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clientapp",
+            "certificate_hash": "f825e63cefd24792230f321f8f8df9d02d5febde"
+          }
+        },
+        {
+          "client_id": "848307937951-qc1f13nhe1jest5a1jnerstfu54cm03b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFhlCe77SsYAUkwSUN4UaR_Zl_o2Uh6LQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848307937951-qc1f13nhe1jest5a1jnerstfu54cm03b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848307937951:android:d9f5c0a699aeca6c21f8aa",
+        "android_client_info": {
+          "package_name": "com.example.parking_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848307937951-s4d5jb7d1h6en37jhp3om55291glrn38.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.parking_app",
+            "certificate_hash": "f825e63cefd24792230f321f8f8df9d02d5febde"
+          }
+        },
+        {
+          "client_id": "848307937951-qc1f13nhe1jest5a1jnerstfu54cm03b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFhlCe77SsYAUkwSUN4UaR_Zl_o2Uh6LQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848307937951-qc1f13nhe1jest5a1jnerstfu54cm03b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

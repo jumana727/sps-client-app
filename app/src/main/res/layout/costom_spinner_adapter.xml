@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="horizontal"
+    android:background="#FCFDFD"
+
+
+   >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idTILVechileNum"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        android:textColorHint="@color/black">
+
+        <TextView
+            android:id="@+id/spinnerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="Select Vehicle"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

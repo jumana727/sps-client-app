@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/recycler_view"
+    android:orientation="vertical"
+    tools:context=".RemoveVehicleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outselectNumber"
+        style="@style/TextInputLayout"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+
+        android:hint="Enter Vechile Number"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/selectVehivle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/removeVehicleButton"
+        android:layout_width="213dp"
+        android:layout_height="53dp"
+        android:layout_below="@id/outselectNumber"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#FF8692F7"
+        android:text="Remove vechile"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outselectNumber"
+        app:layout_constraintVertical_bias="0.158" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <base-config cleartextTrafficPermitted="true" >
+<!--        <domain includeSubdomains="true">10.0.2.2</domain> &lt;!&ndash;For emulator&ndash;&gt;-->
+<!--        <domain includeSubdomains="true">http://ec2-3-145-108-109.us-east-2.compute.amazonaws.com:4242</domain>&lt;!&ndash;For real device, get your ip from pc&ndash;&gt;-->
+    </base-config>
+</network-security-config>

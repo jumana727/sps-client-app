@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddVehicle">
+
+    <TextView
+        android:id="@+id/idTVRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:layout_marginTop="50dp"
+        android:text="Enter the Vehicle detail "
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idTILVechileNum"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="140dp"
+        android:hint="Enter Vechile Number"
+        style="@style/TextInputLayout"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idEdtVechile"
+            android:textStyle="bold"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/addVehicleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTILVechileNum"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:text="Add vechile"
+        android:backgroundTint="#8692F7"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+
+
+
+</RelativeLayout>
