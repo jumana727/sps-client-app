@@ -38,6 +38,8 @@ public class change_password extends AppCompatActivity {
     String walletfromdb = "";
     String passwordfromdb = "";
 
+    int  intbalance = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +67,14 @@ public class change_password extends AppCompatActivity {
                     emailfromdb = dataSnapshot1.child("email").getValue(String.class);
                     phoneFromdb = dataSnapshot1.child("phone").getValue(String.class);
                     passwordfromdb = dataSnapshot1.child("password").getValue(String.class);
-                    walletfromdb = dataSnapshot1.child("wallet").getValue(String.class);
+
+
+                    try{
+                        walletfromdb = dataSnapshot1.child("wallet").getValue(String.class);
+                        intbalance  = Integer.parseInt(walletfromdb);
+                    }catch(Exception e){
+                        intbalance = dataSnapshot1.child("wallet").getValue(Integer.class);
+                    }
                 }
 
 
@@ -123,7 +132,7 @@ public class change_password extends AppCompatActivity {
                                         updates.put("email", emailfromdb);
                                         updates.put("phone", phoneFromdb);
                                         updates.put("password", newpassword);
-                                        updates.put("wallet", walletfromdb);
+                                        updates.put("wallet", intbalance);
 
 
 

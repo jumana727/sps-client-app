@@ -126,9 +126,14 @@
                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                                             for(DataSnapshot snapshot1:snapshot.getChildren()) {
-                                             String mWalletMoney=snapshot1.child("wallet").getValue(String.class);
 
-                                             textViewBalance.setText(mWalletMoney);
+                                             try{
+                                              String mWalletMoney=snapshot1.child("wallet").getValue(String.class);
+                                              textViewBalance.setText(mWalletMoney);
+                                             }catch(Exception e){
+                                              int intBalance = snapshot1.child("wallet").getValue(Integer.class);
+                                              textViewBalance.setText(""+ intBalance);
+                                             }
                                             }
                                            }
                                            @Override

@@ -130,7 +130,7 @@ public class Registration extends AppCompatActivity {
                                     updates.put("email", email);
                                     updates.put("phone", phone);
                                     updates.put("password", password);
-                                    updates.put("wallet", "0");
+                                    updates.put("wallet", 0);
 
                                     String userId = reference.push().getKey();
                                     reference.child(userId).setValue(updates);

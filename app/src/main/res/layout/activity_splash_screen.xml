@@ -24,7 +24,7 @@
         android:layout_marginTop="160dp"
         android:fontFamily="@font/aldrich"
         android:gravity="center"
-        android:text="Parking App"
+        android:text="PARKease"
         android:textColor="#221919"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"

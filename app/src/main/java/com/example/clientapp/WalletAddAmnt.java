@@ -100,13 +100,21 @@ public class WalletAddAmnt extends AppCompatActivity {
         public void onDataChange(@NonNull DataSnapshot snapshot) {
 
             for(DataSnapshot snapshot1:snapshot.getChildren()) {
-                mWalletMoney=snapshot1.child("wallet").getValue(String.class);
                 nameFromdb = snapshot1.child("name").getValue(String.class);
                 emailfromdb = snapshot1.child("email").getValue(String.class);
                 phoneFromdb = snapshot1.child("phone").getValue(String.class);
                 passwordfromdb = snapshot1.child("password").getValue(String.class);
+
+                try{
+                    mWalletMoney = snapshot1.child("wallet").getValue(String.class);
+
+                }catch(Exception e){
+                    int intBalance = snapshot1.child("wallet").getValue(Integer.class);
+                    mWalletMoney = Integer.toString(intBalance);
+                }
+
                 WalletMoney[0] =mWalletMoney;
-                Toast.makeText(WalletAddAmnt.this, mWalletMoney+ "\n" + nameFromdb + "\n" +emailfromdb , Toast.LENGTH_SHORT).show();
+               /* Toast.makeText(WalletAddAmnt.this, mWalletMoney+ "\n" + nameFromdb + "\n" +emailfromdb , Toast.LENGTH_SHORT).show();*/
 
             }
         }
@@ -298,7 +306,7 @@ public class WalletAddAmnt extends AppCompatActivity {
                             updates.put("email", emailfromdb);
                             updates.put("phone", phoneFromdb);
                             updates.put("password", passwordfromdb);
-                            updates.put("wallet", Integer.toString(ans));
+                            updates.put("wallet", ans);
 
 
 

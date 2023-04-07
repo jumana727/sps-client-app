@@ -35,6 +35,7 @@ public class update_profile extends AppCompatActivity {
 
     String passwordfromdb = "";
 
+    int intbalance = 0;
 
     String new_user_name , new_user_email , new_user_phone ;
 
@@ -69,8 +70,14 @@ public class update_profile extends AppCompatActivity {
                     emailfromdb = dataSnapshot1.child("email").getValue(String.class);
                     phoneFromdb = dataSnapshot1.child("phone").getValue(String.class);
                     passwordfromdb = dataSnapshot1.child("password").getValue(String.class);
-                    walletfromdb = dataSnapshot1.child("wallet").getValue(String.class);
 
+
+                    try{
+                        walletfromdb = dataSnapshot1.child("wallet").getValue(String.class);
+                       intbalance  = Integer.parseInt(walletfromdb);
+                    }catch(Exception e){
+                              intbalance = dataSnapshot1.child("wallet").getValue(Integer.class);
+                    }
                 }
 
 
@@ -141,7 +148,7 @@ public class update_profile extends AppCompatActivity {
                                 updates.put("email", new_user_email);
                                 updates.put("phone", new_user_phone);
                                 updates.put("password", passwordfromdb);
-                                updates.put("wallet", walletfromdb);
+                                updates.put("wallet", intbalance);
 
 
 

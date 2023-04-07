@@ -66,10 +66,16 @@ public class User_Profile extends AppCompatActivity {
 
                 for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
                 {       namefromdb = dataSnapshot1.child("name").getValue(String.class);
-
                     emailfromdb = dataSnapshot1.child("email").getValue(String.class);
                     phoneFromdb = dataSnapshot1.child("phone").getValue(String.class);
-                    walletfromdb = dataSnapshot1.child("wallet").getValue(String.class);
+
+                    try{
+                        walletfromdb = dataSnapshot1.child("wallet").getValue(String.class);
+                        set_balance.setText(walletfromdb);
+                    }catch(Exception e){
+                    int intBalance = dataSnapshot1.child("wallet").getValue(Integer.class);
+                        set_balance.setText(""+ intBalance);
+                    }
                 }
 
                 curent.setText("User Profile");
@@ -77,7 +83,7 @@ public class User_Profile extends AppCompatActivity {
                 set_name.setText(current_user);
                 set_email.setText(emailfromdb);
                 set_phone.setText(phoneFromdb);
-                set_balance.setText(walletfromdb);
+
             }
 
             @Override

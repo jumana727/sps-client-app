@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     TextView displau_user;
     LinearLayout walletBtn;
     String Current_user;
-    LinearLayout bikeBtn,logBtn;
+    LinearLayout bikeBtn,logBtn , showavalible;
 //    ImageButton walletBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        // parking detail display
+        showavalible = findViewById(R.id.ShowParkngSpace);
+        showavalible.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,parking_slot.class);
+                startActivity(i);
+            }
+        });
 
 
 
@@ -79,6 +87,11 @@ public class MainActivity extends AppCompatActivity {
 
         //set toolbar title
 //        toolbar.setTitle("toolbarTitle");
+
+
+
+
+
 
 
 

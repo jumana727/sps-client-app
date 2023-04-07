@@ -1,5 +1,7 @@
 package com.example.clientapp;
 
+import java.util.Hashtable;
+
 public class global_username {
 
     public static String username = "";
