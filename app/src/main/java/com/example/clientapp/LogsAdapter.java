@@ -13,7 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-class LogsAdapter extends RecyclerView.Adapter<LogsAdapter.ProfileViewHolder> {
+class
+LogsAdapter extends RecyclerView.Adapter<LogsAdapter.ProfileViewHolder> {
     Context context;
     ArrayList<LogsModel> arrModel;
     ArrayList<LogsModel> arrModels;

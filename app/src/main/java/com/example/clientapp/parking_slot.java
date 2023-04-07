@@ -74,7 +74,13 @@ public class parking_slot extends AppCompatActivity {
 //                    GridView gridView=findViewById(R.id.gridView);
                  //   ArrayAdapter<String> adapter=new ArrayAdapter<>(parking_slot.this,R.layout.parking_adapter,gridViewValue);
 //                  gridView.setAdapter(adapter);
-               //    markColor(dict, gridView);
+               try{
+                   markColor(dict, gridView);
+               }catch(Exception e){
+                   //gridView=findViewById(R.layout.parking_adapter);
+                   System.out.println(e.getMessage());
+               }
+
 
                 }
 
@@ -178,17 +184,17 @@ if(!dict.isEmpty()){
             int key=keys.nextElement();
             if(dict.get(key)==1){
               //  if(gridView.getChildAt(key-1).getSolidColor()!=Color.rgb(107,123,239))
-               gridView.getChildAt(key-1).setBackgroundColor(Color.GRAY);
+               gridView.getChildAt(key-1).setBackgroundColor(Color.rgb(107,123,239));
 
 
 
                 /* Toast.makeText(parking_slot.this, " " + dict.get(key), Toast.LENGTH_SHORT).show();*/
-                System.out.println("inside 1"+gridView.getChildAt(key-1));
+
             }else if(dict.get(key)==0){
                 /* Toast.makeText(parking_slot.this, " " + dict.get(key), Toast.LENGTH_SHORT).show();*/
 
 //                if(gridView.getChildAt(key-1).getSolidColor()!=Color.rgb(193,199,243))
-                gridView.getChildAt(key-1).setBackgroundColor(Color.BLUE);
+                gridView.getChildAt(key-1).setBackgroundColor(Color.rgb(193,199,243));
 
                 System.out.println("outside 0"+gridView.getChildAt(key-1));
             }
