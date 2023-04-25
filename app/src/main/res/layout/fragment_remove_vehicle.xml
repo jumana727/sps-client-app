@@ -29,10 +29,12 @@
             android:id="@+id/selectVehivle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:gravity="center"
             android:spinnerMode="dropdown"
             android:textAlignment="center"
             tools:ignore="TouchTargetSizeCheck" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

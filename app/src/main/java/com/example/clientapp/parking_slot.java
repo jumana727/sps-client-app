@@ -35,7 +35,8 @@ public class parking_slot extends AppCompatActivity {
     GridView gridView;
 
     Hashtable<Integer, Integer> dict = new Hashtable<>();
-
+    ArrayAdapter<String> adapter;
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,9 +54,9 @@ public class parking_slot extends AppCompatActivity {
         // databadse
 
 
-        ArrayAdapter<String> adapter=new ArrayAdapter<>(this,R.layout.parking_adapter,gridViewValue);
+        adapter=new ArrayAdapter<>(this,R.layout.parking_adapter,gridViewValue);
       //  int place;
-            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("ParkingSlots");
+        reference = FirebaseDatabase.getInstance().getReference("ParkingSlots");
              Query checkUserDatabase = reference.orderByChild("ParkingSlotsId");
             // dict.clear();
             checkUserDatabase.addValueEventListener(new ValueEventListener() {
