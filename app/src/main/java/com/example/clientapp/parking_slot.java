@@ -28,7 +28,7 @@ import java.util.Hashtable;
 
 public class parking_slot extends AppCompatActivity {
 
-    static  String[] gridViewValue = new String[4];
+    static  String[] gridViewValue = new String[12];
 
     int place;
     int status;
@@ -45,7 +45,7 @@ public class parking_slot extends AppCompatActivity {
 
          gridView=findViewById(R.id.gridView);
 
-        for(int i=1;i<=4;i++){
+        for(int i=1;i<=12;i++){
             gridViewValue[i-1]=i+"";
         }
 
