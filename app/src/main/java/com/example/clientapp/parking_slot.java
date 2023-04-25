@@ -98,6 +98,7 @@ public class parking_slot extends AppCompatActivity {
 
 //        ActionBar actionBar = getSupportActionBar();
 //        actionBar.setDisplayHomeAsUpEnabled(true);
+        
 
          //---------------------
 
@@ -172,6 +173,7 @@ public class parking_slot extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
 
+        onStart();
 //        ArrayAdapter<String> adapter=new ArrayAdapter<>(this,R.layout.parking_adapter,gridViewValue);
     //    gridView.setAdapter(new ArrayAdapter<>(this,R.layout.parking_adapter,gridViewValue));
 
