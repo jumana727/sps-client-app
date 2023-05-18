@@ -28,10 +28,7 @@ public class Registration extends AppCompatActivity {
 
     EditText user_name , user_email, user_phone , user_password, user_con_password , user_id;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    String passwordPattern = "^(?=.*[0-9])\"\n" +
-            "+ \"(?=.*[a-z])(?=.*[A-Z])\"\n" +
-            "+ \"(?=.*[@#$%^&+=])\"\n" +
-            "+ \"(?=\\\\S+$).{8,20}$";
+    String passwordPattern = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}";
     Button registation;
 
     FirebaseDatabase database;
@@ -85,7 +82,7 @@ public class Registration extends AppCompatActivity {
                         user_con_password.setError("Enter Comform Password");
                     }
                 }else{
-                    if(userid.length() < 6 || ! email.matches(emailPattern) || phone.length() < 10 || phone.length() > 10 ||  password.length() < 6  || ! password.matches(passwordPattern)){
+                    if(userid.length() < 6 || ! email.matches(emailPattern) || phone.length() < 10 || phone.length() > 10 ||  password.length() < 8  || ! password.matches(passwordPattern)){
                         if( userid.length() < 6 ){
                             user_id.setError("Enter Long UserName");
                         }
@@ -98,7 +95,7 @@ public class Registration extends AppCompatActivity {
                             user_phone.setError("Enter Valid Phone Number");
                         }
 
-                        if(password.length() <= 6){
+                        if(password.length() <= 7){
                             user_password.setError("Enter Long Password");
                             Toast.makeText(getApplicationContext(),"Plz Enter Long Password",Toast.LENGTH_LONG).show();
                         }
